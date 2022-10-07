@@ -10,8 +10,10 @@ const languageCode = process.env.languageCode;
 const functions = require("firebase-functions");
 const clientTwilio = require("twilio")(accountSid, authToken);
 const { SessionsClient } = require("@google-cloud/dialogflow-cx");
+
+//Session management: one single session for individual customers
 //const sessionId = Math.random().toString(36).substring(7) + "-whatsapp";
-const sessionId = "739iO09-whatsapp";
+const sessionId = "<INSERT UNIQUE ID>-whatsapp";
 
 // Set API URI according to your agent's location
 const client = new SessionsClient({
